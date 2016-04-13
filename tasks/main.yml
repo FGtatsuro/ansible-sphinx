@@ -1,4 +1,6 @@
 ---
 # tasks file for sphinx
-- name: Run specified tasks on current platform 
+- name: Run specified tasks on current platform
   include: "{{ ansible_os_family }}.yml"
+- name: Install Sphinx
+  pip: name=Sphinx
