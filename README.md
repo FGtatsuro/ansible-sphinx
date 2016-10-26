@@ -46,6 +46,12 @@ Local requirements are as follows.
 - Ansible (>= 2.0.0)
 - Docker (>= 1.10.1)
 
+Notes
+-----
+
+- On this role, following Sphinx-related libraries are also installed.
+  - [sphinx-intl](https://pypi.python.org/pypi/sphinx-intl)
+
 License
 -------
 
