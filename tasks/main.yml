@@ -3,10 +3,13 @@
 - name: Run specified tasks on current platform
   include: "{{ ansible_os_family }}.yml"
 - name: Install Sphinx
-  pip: name=Sphinx
+  pip:
+    name: Sphinx
+    version: "{{ sphinx_version | default(None) }}"
   become: yes
 - name: Install Sphinx-related libraries
-  pip: name="{{ item }}"
+  pip:
+    name: "{{ item }}"
   with_items:
     - sphinx-intl
   become: yes

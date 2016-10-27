@@ -20,6 +20,10 @@ Role Variables
 
 The variables we can use in this role.
 
+|name|description|type|default|
+|---|---|---|---|
+|sphinx_version|Version of Sphinx you want to install|str|It isn't defined in default. In this case, latest stable version is installed.|
+
 Role Dependencies
 -----------------
 

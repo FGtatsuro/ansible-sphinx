@@ -12,7 +12,8 @@ namespace :spec do
     },
     {
       :name     =>  'container',
-      :backend  =>  'docker' 
+      :backend  =>  'docker',
+      :sphinx_version => '1.4.6'
     }
   ]
   if ENV['SPEC_TARGET'] then
@@ -28,6 +29,7 @@ namespace :spec do
     RSpec::Core::RakeTask.new(host[:name].to_sym) do |t|
       ENV['TARGET_HOST'] = host[:name]
       ENV['SPEC_TARGET_BACKEND'] = host[:backend]
+      ENV['SPHINX_VERSION'] = host[:sphinx_version]
       t.pattern = "spec/sphinx_spec.rb"
     end
   end
