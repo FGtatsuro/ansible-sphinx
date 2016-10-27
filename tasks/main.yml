@@ -2,11 +2,20 @@
 # tasks file for sphinx
 - name: Run specified tasks on current platform
   include: "{{ ansible_os_family }}.yml"
-- name: Install Sphinx
-  pip: name=Sphinx
+- name: Install Sphinx(latest stable)
+  pip:
+    name: Sphinx
+  when: sphinx_version is not defined
+  become: yes
+- name: Install Sphinx(specified version)
+  pip:
+    name: Sphinx
+    version: "{{ sphinx_version }}"
+  when: sphinx_version is defined
   become: yes
 - name: Install Sphinx-related libraries
-  pip: name="{{ item }}"
+  pip:
+    name: "{{ item }}"
   with_items:
     - sphinx-intl
   become: yes

@@ -12,3 +12,7 @@ end
     its(:exit_status) { should eq 0 }
   end
 end
+
+describe command('sphinx-build'), :if => ENV['SPHINX_VERSION'] do
+  its(:stdout) { should contain('1.4.6') }
+end
