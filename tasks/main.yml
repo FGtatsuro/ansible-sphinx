@@ -5,3 +5,8 @@
 - name: Install Sphinx
   pip: name=Sphinx
   become: yes
+- name: Install Sphinx-related libraries
+  pip: name="{{ item }}"
+  with_items:
+    - sphinx-intl
+  become: yes
