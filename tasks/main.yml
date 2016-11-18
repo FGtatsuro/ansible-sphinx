@@ -18,4 +18,5 @@
     name: "{{ item }}"
   with_items:
     - sphinx-intl
+    - recommonmark
   become: yes
