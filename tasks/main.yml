@@ -19,4 +19,5 @@
   with_items:
     - sphinx-intl
     - recommonmark
+    - nbsphinx
   become: yes
