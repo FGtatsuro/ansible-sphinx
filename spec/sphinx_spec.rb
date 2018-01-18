@@ -6,7 +6,8 @@ end
 
 [
   'sphinx-quickstart',
-  'sphinx-intl'
+  'sphinx-intl',
+  'nbsphinx'
 ].each do |c|
   describe command("which #{c}") do
     its(:exit_status) { should eq 0 }

@@ -56,6 +56,7 @@ Notes
 - On this role, following Sphinx-related libraries are also installed.
   - [sphinx-intl](https://pypi.python.org/pypi/sphinx-intl) (For i18n)
   - [recommonmark](https://pypi.python.org/pypi/recommonmark) (For Markdown support)
+  - [nbsphinx](https://pypi.python.org/pypi/nbsphinx) (For Jupyter Notebook support)
 
 License
 -------
