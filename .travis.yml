@@ -12,6 +12,7 @@ matrix:
         - TARGET=localhost
         - PYTHONPATH="/Library/Python/2.7/site-packages:$PYTHONPATH"
       install:
+        - sudo ln -s /usr/local/bin/pip2 /usr/local/bin/pip
         - sudo pip install -U setuptools
         - sudo pip install ansible
         - ansible-galaxy install FGtatsuro.python-requirements
